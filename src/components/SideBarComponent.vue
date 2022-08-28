@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "SideBar",
+  name: "SideBarComponent",
 };
 </script>
 

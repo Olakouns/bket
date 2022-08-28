@@ -1,13 +1,11 @@
 <template>
-$END$
+  <div>HeaderComponent</div>
 </template>
 
 <script>
 export default {
-name: "HeaderComponent"
-}
+  name: "HeaderComponent",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
