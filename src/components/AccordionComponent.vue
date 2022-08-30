@@ -1,0 +1,50 @@
+<template>
+  <div class="mt-2">
+    <div
+      v-on:click="isOpen = !isOpen"
+      class="flex items-center menu-expanded p-2"
+    >
+      <div class="mx-3">
+        <svg
+          width="16"
+          height="18"
+          viewBox="0 0 16 18"
+          fill="black"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.3456 3.93874L8.66778 0H7.33222L0.654412 3.93874L0 5.06783V12.9453L0.654412 14.0613L7.33222 18H8.66778L15.3456 14.0613L16 12.9453V5.06783L15.3456 3.93874ZM7.33222 16.4903L1.32219 12.9453V6.17063L7.33222 9.38737V16.4903ZM1.66945 4.85772L8 1.12909L14.3305 4.85772L8 8.25828L1.66945 4.85772ZM14.6778 12.9453L8.66778 16.4903V9.38737L14.6778 6.17063V12.9453Z"
+            fill-opacity="0.65"
+          />
+        </svg>
+      </div>
+      <label class="cursor-pointer">{{ title }}</label>
+    </div>
+    <div class="p-2" :class="isOpen ? 'd-block' : 'hidden'">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AccordionComponent",
+  props: {
+    title: String,
+  },
+  data: () => {
+    return {
+      isOpen: false,
+    };
+  },
+};
+</script>
+
+<style scoped lang="scss">
+.menu-expanded {
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgba(217, 217, 217, 0.8);
+  color: rgba(0, 0, 0, 0.6);
+}
+</style>
