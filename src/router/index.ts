@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import TestView from "../views/TestView.vue";
 import DashboardView from "../views/DashboardView.vue";
+import ProductsView from "../views/ProductsView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/home",
         name: "home",
         component: DashboardView,
+      },
+      {
+        path: "/products",
+        name: "products",
+        component: ProductsView,
       },
       {
         path: "/test",

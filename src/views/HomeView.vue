@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="bket-home-content relative pt-3">
+      <div class="bket-home-content relative pt-10">
         <router-view></router-view>
         <div
           class="flex justify-center w-full black-20 font-bold absolute -bottom-5 text-xs"
